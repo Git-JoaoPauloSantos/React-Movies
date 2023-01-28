@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import MovieCard from '../components/MovieCard'
+import { useFetch } from '../hooks/useFetch'
 import '../pages/MoviesGrid.css'
 
-const searchUrl = import.meta.env.VITE_SEARCH
+const searchURL = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
 
 const Search = () => {
@@ -11,6 +12,14 @@ const Search = () => {
 
   const [movies, setMovies] = useState([])
   const query = searchParams.get("q")
+
+  const {data} = useFetch(`${searchURL}?${apiKey}&query=${query}&language=pt-BR`)
+
+  useEffect(() => {
+
+    {data && setMovies(data.results)}
+
+  }, [data])
 
   return (
     <div className="container">
