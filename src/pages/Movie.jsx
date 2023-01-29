@@ -5,7 +5,7 @@ import { FaStar } from 'react-icons/fa'
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../hooks/useFetch'
 
-const moviesURL = import.meta.env.VITE_API
+const moviesURL = import.meta.env.VITE_API_MOVIE
 const apiKey = import.meta.env.VITE_API_KEY
 const imageUrl = import.meta.env.VITE_IMG
 

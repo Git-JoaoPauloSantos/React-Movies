@@ -1,29 +1,41 @@
+import './Home.css'
 import { useState, useEffect } from "react"
-import MovieCard from "../components/MovieCard"
-import { useFetch } from "../hooks/useFetch"
+import ListMovies from "../components/ListMovies"
+import FeaturedMovie from '../components/FeaturedMovie'
+import Api from "../Api"
 
-import './MoviesGrid.css'
 
-const moviesURL = import.meta.env.VITE_API
-const apiKey = import.meta.env.VITE_API_KEY
 
 const Home = () => {
-  const [topMovies, setTopMovies] = useState([])
+  const [listAll, setListAll] = useState([])
+  const [featureMovieData, setFeatureMuvieDdata] = useState(null)
 
-  const {data: movies} = useFetch(`${moviesURL}top_rated?${apiKey}&language=pt-BR`)
 
   useEffect(() => {
-    {movies && setTopMovies(movies.results)}
+    const loadAll = async () => {
+      let data = await Api.getHomeList()
+      setListAll(data)
 
-  }, [movies])
+      // Pegando filme em destaque de forma randomica
+      let toprated = data.filter(i=> i.top === 'toprated')
+      let randomMovie = Math.floor(Math.random() * (toprated[0].body.results.length -1))
+      let movie = toprated[0].body.results[randomMovie]
+      setFeatureMuvieDdata(movie)
+    }
+    loadAll()
+
+  }, [])
+
+  console.log(listAll)
 
   return (
     <div className="container">
-      <h2 className="title">Melhores filmes</h2>
-      <div className="movies-container">
-        {!topMovies && <p>Carregando...</p>}
-        {topMovies && topMovies.map((movie) => (<MovieCard key={movie.id} movie={movie} />))}
-      </div>
+      {featureMovieData && <FeaturedMovie movie={featureMovieData} />}
+      <section className="lists-movies">
+        {listAll && listAll.map((list) => (
+          <ListMovies key={list.title} title={list.title} body={list.body} />
+        ))}
+      </section>
     </div>
   )
 }

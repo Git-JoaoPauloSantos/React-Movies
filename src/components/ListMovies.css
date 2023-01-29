@@ -1,0 +1,56 @@
+.list-movies-container {
+  margin-bottom: 2.5rem;
+}
+.list-movies-container h2 {
+  margin: 0 0 0 2.5rem;
+}
+.list-movies-container .list-movies-listarea {
+  overflow-x: hidden;
+  padding-left: 2.5rem;
+}
+.list-movies-container .list-movies-listarea .list-movies {
+  width: 9999999px;
+}
+.list-movies-container .list-movies-listarea .list-movies .movie {
+  display: inline-block;
+  max-width: 300px;
+  cursor: pointer;
+}
+.list-movies-container .list-movies-listarea .list-movies .movie img {
+  width: 100%;
+  transform: scale(0.9);
+  transition: all ease 0.3s;
+  border-radius: 4px;
+}
+.list-movies-container .list-movies-listarea .list-movies .movie img:hover {
+  transform: scale(1);
+}
+.btn-left svg,
+.btn-right svg {
+  font-size: 50px;
+}
+.btn-left,
+.btn-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  position: absolute;
+  width: 40px;
+  height: 169px;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 8;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all ease .4s;
+  opacity: 0;
+}
+.btn-left {
+  left: 0;
+}
+.btn-right {
+  right: 0;
+}
+.list-movies-container:hover .btn-left,
+.list-movies-container:hover .btn-right{
+    opacity: 1;
+}

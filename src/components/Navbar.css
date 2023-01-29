@@ -1,14 +1,25 @@
 #navbar{
+    position: fixed;
+    z-index: 9;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #121212;
+    padding: 0 2.5rem;
+    background: linear-gradient( to bottom, #111111ef, transparent);
+    transition: all ease .8s;
 }
-#navbar h2 a{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
+#navbar.black{
+    background: #141414;
+}
+#navbar .logo-container{
+    height: 30px;
+}
+#navbar img{
+    height: 100%;
 }
 #navbar form{
     display: flex;
@@ -35,4 +46,14 @@
 #navbar form button:hover{
     background-color: #FFF;
     border-color: #FFF;
+}
+.search-container{
+    display: flex;
+}
+.icon-user{
+    height: 30px;
+}
+.icon-user svg{
+    height: 100%;
+    font-size: 2.5rem;
 }

@@ -1,0 +1,62 @@
+.featured{
+    height: 100vh;
+}
+.featured .featured-gradient-vertical{
+    width: inherit;
+    height: inherit;
+    background: linear-gradient( to top, #111111fb 10%, transparent 90%);
+}
+.featured .featured-gradient-horizontal{
+    width: inherit;
+    height:  inherit;
+    background: linear-gradient( to right, #11111198 30%, transparent 70%);
+}
+.featured-infos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    padding-bottom: 180px;
+    padding-top: 70px;
+    margin-left: 2.5rem;
+}
+.featured-name h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+.featured-description{
+    width: 80%;
+}
+.featured-description p{
+    margin: 1rem 0 1rem 0;
+    font-size: 1.3rem;
+    color: #dddddd;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+.btn-watch, .btn-more-infos{
+    display: flex;
+    font-size: 1.3rem;
+    font-weight: bold;
+    padding: .8rem 1.6rem;
+    border-radius: .3rem;
+    gap: .5rem;
+    align-items: center;
+    opacity: 1;
+    transition: all ease .3s;
+}
+.btn-watch{
+    background-color: #FFF;
+    color: #111;
+}
+
+.btn-more-infos{
+    background-color: #797979b9;
+    color: #dddddd;
+}
+.btn-watch:hover, .btn-more-infos:hover{
+    opacity: 0.7;
+}
