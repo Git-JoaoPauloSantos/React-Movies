@@ -1,54 +1,56 @@
 .list-movies-container {
-  margin-bottom: 2.5rem;
+    margin-bottom: 2.5rem;
+    width: 100%;
 }
 .list-movies-container h2 {
-  margin: 0 0 0 2.5rem;
+     margin: 0 0 0 2.5rem;
 }
-.list-movies-container .list-movies-listarea {
-  overflow-x: hidden;
-  padding-left: 2.5rem;
+.list-movies-container .list-movies {
+    display: flex;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
-.list-movies-container .list-movies-listarea .list-movies {
-  width: 9999999px;
+.list-movies .movie {
+    width: 300px;
+    cursor: pointer;
+    flex: none;
 }
-.list-movies-container .list-movies-listarea .list-movies .movie {
-  display: inline-block;
-  max-width: 300px;
-  cursor: pointer;
+.list-movies .movie img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+    border-radius: 4px;
+    object-fit: cover;
 }
-.list-movies-container .list-movies-listarea .list-movies .movie img {
-  width: 100%;
-  transform: scale(0.9);
-  transition: all ease 0.3s;
-  border-radius: 4px;
-}
-.list-movies-container .list-movies-listarea .list-movies .movie img:hover {
+.list-movies .movie img:hover {
   transform: scale(1);
 }
 .btn-left svg,
 .btn-right svg {
-  font-size: 50px;
+    font-size: 50px;
+    color: #FFF;
 }
 .btn-left,
 .btn-right {
     display: flex;
     align-items: center;
     justify-content: center;
-  position: absolute;
-  width: 40px;
-  height: 169px;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: 8;
-  overflow: hidden;
-  cursor: pointer;
-  transition: all ease .4s;
-  opacity: 0;
+    position: absolute;
+    width: 40px;
+    height: 169px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 8;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all ease .4s;
+    opacity: 0;
 }
 .btn-left {
-  left: 0;
+    left: 0;
 }
 .btn-right {
-  right: 0;
+    right: 0;
 }
 .list-movies-container:hover .btn-left,
 .list-movies-container:hover .btn-right{
