@@ -5,7 +5,6 @@ import FeaturedMovie from '../components/FeaturedMovie'
 import Api from "../Api"
 
 
-
 const Home = () => {
   const [listAll, setListAll] = useState([])
   const [featureMovieData, setFeatureMuvieDdata] = useState(null)
@@ -33,7 +32,7 @@ const Home = () => {
       {featureMovieData && <FeaturedMovie movie={featureMovieData} />}
       <section className="lists-movies">
         {listAll && listAll.map((list) => (
-          <ListMovies key={list.title} title={list.title} body={list.body} />
+          <ListMovies key={list.title} title={list.title} body={list.body} top={list.top} />
         ))}
       </section>
     </div>

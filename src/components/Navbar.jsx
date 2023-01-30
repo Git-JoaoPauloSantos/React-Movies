@@ -22,7 +22,7 @@ const Navbar = ({ blackNavbar }) => {
     return (
         <nav id='navbar' className={blackNavbar ? 'black' : ''}>
             <div className="logo-container">
-                <img src={Logo} alt="ReactMovie" />
+                <Link to={"/"}><img src={Logo} alt="ReactMovie" /></Link>
             </div>
             <div className="search-container">
                 <form onSubmit={handleSubmit}>

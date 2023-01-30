@@ -3,16 +3,18 @@
     width: 100%;
 }
 .list-movies-container h2 {
-     margin: 0 0 0 2.5rem;
+     margin: 0 0 -3.8rem 2.5rem;
 }
 .list-movies-container .list-movies {
     display: flex;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
+    /* background-color: #04dd0498; */
+    height: 280px;
+    align-items: center;
 }
 .list-movies .movie {
     width: 300px;
-    cursor: pointer;
     flex: none;
 }
 .list-movies .movie img {
@@ -21,9 +23,10 @@
     transition: all ease 0.3s;
     border-radius: 4px;
     object-fit: cover;
+    cursor: pointer;
 }
-.list-movies .movie img:hover {
-  transform: scale(1);
+.list-movies .movie:hover img {
+  transform: scale(1.08);
 }
 .btn-left svg,
 .btn-right svg {
@@ -37,14 +40,10 @@
     justify-content: center;
     position: absolute;
     width: 40px;
-    height: 169px;
-    border: none;
-    background-color: rgba(0, 0, 0, 0.6);
+    height: 300px;
     z-index: 8;
     overflow: hidden;
-    cursor: pointer;
-    transition: all ease .4s;
-    opacity: 0;
+    opacity: 1;
 }
 .btn-left {
     left: 0;
@@ -52,7 +51,73 @@
 .btn-right {
     right: 0;
 }
-.list-movies-container:hover .btn-left,
-.list-movies-container:hover .btn-right{
+.btn-left button,
+.btn-right button{
+    height: 175px;
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.301);
+    transition: all ease .4s;
+    border: none;
+    opacity: 0;
+}
+.list-movies-container:hover .btn-left button,
+.list-movies-container:hover .btn-right button{
     opacity: 1;
+}
+.movie .content{
+    overflow: hidden;
+    height: 0;
+    transform: scale(0.9);
+    transition: all ease .3s;
+    background-color: #313131;
+    border-radius: 4px;
+}
+.movie:hover .content{
+    height: auto;
+    margin-top: -25px;
+    transform: scale(1.08);
+    transition: all ease .3s;
+}
+.btns{
+    display: flex;
+    justify-content: space-between;
+    margin: .5rem .3rem;
+}
+.btn-group, .btn-individual{
+    display: flex;
+    gap: .3rem;
+}
+.btn-group button, .btn-individual button{
+    background-color: #4e4e4e;
+    width: 50px;
+    height: 50px;
+    flex: none;
+    border-radius: 50%;
+    border: 1.5px solid #ccccccc4;
+    color: #FFF;
+    cursor: pointer;
+}
+.btn-group .btn-play{
+    background: #FFF;
+    color: #000;
+}
+.btns .btn-group svg,
+.btns .btn-individual svg{
+    width: 20px;
+    height: 20px;
+}
+
+.content .infos{
+    margin: .5rem .3rem;
+}
+.infos .average{
+    color: #85ff85cb;
+    font-weight: bold;
+}
+.infos p{
+    margin-bottom: .5rem;
+}
+.infos .name{
+    font-size: 1.2rem;
+    font-weight: bold;
 }

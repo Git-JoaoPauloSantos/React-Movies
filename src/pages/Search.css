@@ -1,0 +1,31 @@
+.grid-movies-container {
+    margin: 8rem 0 2rem 0;
+    width: 100%;
+}
+.grid-movies-container h2 {
+     margin: 0 0 .8rem 2.5rem;
+}
+.grid-movies-container .grid-movies {
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden;
+    scroll-behavior: smooth;
+    align-items: center;
+    justify-content: center;
+}
+.grid-movies .movie {
+    width: 300px;
+    height: 300px;
+    flex: none;
+}
+.grid-movies .movie img {
+    width: 100%;
+    transform: scale(0.9);
+    transition: all ease 0.3s;
+    border-radius: 4px;
+    object-fit: cover;
+    cursor: pointer;
+}
+.grid-movies .movie:hover img {
+  transform: scale(1.08);
+}
