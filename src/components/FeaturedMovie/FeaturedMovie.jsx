@@ -1,7 +1,9 @@
 import './FeaturedMovie.css'
+// Icons
 import { FaPlay } from 'react-icons/fa';
 import { FiInfo } from 'react-icons/fi';
-import Functions from '../Functions'
+// Functions
+import Functions from '../../Functions'
 
 
 const FeaturedMovie = ({ movie }) => {

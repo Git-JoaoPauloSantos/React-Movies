@@ -1,4 +1,7 @@
 import './ListMovies.css'
+import { useRef } from 'react';
+import { Link } from 'react-router-dom';
+// Icons
 import { MdNavigateBefore } from 'react-icons/md';
 import { MdNavigateNext } from 'react-icons/md';
 import { FaPlay } from 'react-icons/fa';
@@ -6,11 +9,11 @@ import { HiPlus } from 'react-icons/hi';
 import { AiOutlineLike } from 'react-icons/ai';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import Functions from '../Functions'
-import ImgNotFound from '../images/ImgNotFound.png'
+// Functions
+import Functions from '../../Functions'
+// Image
+import ImgNotFound from '../../images/ImgNotFound.png'
 
-import { useRef, useState } from 'react';
-import { Link } from 'react-router-dom';
 
 const imageUrl = import.meta.env.VITE_IMG
 const searchGoogleURL = `https://www.google.com/search?q=assistir `

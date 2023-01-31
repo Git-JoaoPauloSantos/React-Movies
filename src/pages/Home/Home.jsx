@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react"
 import './Home.css'
-import ListMovies from "../components/ListMovies"
-import FeaturedMovie from '../components/FeaturedMovie'
-import LoadingPage from '../components/LoadingPage'
-import Api from "../Api"
+import ListMovies from "../../components/ListMovies/ListMovies"
+import FeaturedMovie from '../../components/FeaturedMovie/FeaturedMovie'
+import LoadingPage from '../../components/LoadingPage/LoadingPage'
+import Api from "../../Api"
 
 
 const Home = () => {

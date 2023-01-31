@@ -1,6 +1,7 @@
-import React from 'react'
 import './LoadingPage.css'
-import LoadingImg from '../images/Loading.gif'
+
+// Gif
+import LoadingImg from '../../images/Loading.gif'
 
 const LoadingPage = () => {
     return (

@@ -1,11 +1,16 @@
 import React from 'react'
-import './Movie.css'
-import '../components/FeaturedMovie.css'
 import { useParams } from 'react-router-dom'
-import { useFetch } from '../hooks/useFetch'
+import LoadingPage from '../../components/LoadingPage/LoadingPage'
+// Styles
+import './Movie.css'
+import '../../components/FeaturedMovie/FeaturedMovie.css'
+// Custom Hook
+import { useFetch } from '../../hooks/useFetch'
+// Icon
 import { FaPlay } from 'react-icons/fa';
-import Functions from '../Functions'
-import LoadingPage from '../components/LoadingPage'
+// Functions
+import Functions from '../../Functions'
+
 
 const moviesURL = import.meta.env.VITE_API_MOVIE
 const tvURL = import.meta.env.VITE_API_TV

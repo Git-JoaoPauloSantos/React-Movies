@@ -1,10 +1,12 @@
 import './Navbar.css'
 import { useRef, useState } from 'react'
 import { Link, useNavigate } from "react-router-dom"
+// Icons
 import { BiSearchAlt2 } from 'react-icons/bi'
 import { MdNotifications } from 'react-icons/md'
-import Logo from '../images/ReactMovieLogo.png'
-import IconUser from '../images/IconUser.png'
+// images
+import Logo from '../../images/ReactMovieLogo.png'
+import IconUser from '../../images/IconUser.png'
 
 
 const Navbar = ({ blackNavbar }) => {
@@ -47,7 +49,7 @@ const Navbar = ({ blackNavbar }) => {
                         value={search}
                         onChange={(e) => setSearch(e.target.value)}
                     />
-                    <button id='search-btn' type="submit" onMouseOver={visibilitySearchInput}> <BiSearchAlt2 /> </button>
+                    <button id='search-btn' onClick={visibilitySearchInput}><BiSearchAlt2 /></button>
                 </form>
                 <div id="icon-notification"><MdNotifications /></div>
                 <div id="icon-user"><img src={IconUser} alt="Icone do Usuário" /></div>

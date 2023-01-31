@@ -1,15 +1,20 @@
-import '../pages/Search.css'
+import './Search.css'
 import { useEffect, useState } from 'react'
 import { Link, useSearchParams } from 'react-router-dom'
-import { useFetch } from '../hooks/useFetch'
+// Custom Hook
+import { useFetch } from '../../hooks/useFetch'
+// Icons
 import { FaPlay } from 'react-icons/fa';
 import { HiPlus } from 'react-icons/hi';
 import { AiOutlineLike } from 'react-icons/ai';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
-import Functions from '../Functions';
-import LoadingPage from '../components/LoadingPage';
-import ImgNotFound from '../images/ImgNotFound.png'
+// Functions
+import Functions from '../../Functions';
+// Import Loading Page
+import LoadingPage from '../../components/LoadingPage/LoadingPage';
+// Image
+import ImgNotFound from '../../images/ImgNotFound.png'
 
 const searchURL = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
