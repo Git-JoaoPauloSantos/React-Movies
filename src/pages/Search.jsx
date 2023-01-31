@@ -8,6 +8,7 @@ import { AiOutlineLike } from 'react-icons/ai';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import Functions from '../Functions';
+import LoadingPage from '../components/LoadingPage';
 
 const searchURL = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
@@ -52,6 +53,7 @@ const Search = () => {
           </div>
         ))}
       </div>
+      {movies.length <= 0 && <LoadingPage />}
     </div>
   )
 }

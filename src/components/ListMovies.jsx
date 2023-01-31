@@ -17,11 +17,11 @@ const ListMovies = ({ title, body, top }) => {
     const listMovies = useRef(null)
 
     const handleLeftClick = () => {
-        listMovies.current.scrollLeft -= 500
+        listMovies.current.scrollLeft -= 800
     }
 
     const handleRightClick = () => {
-        listMovies.current.scrollLeft += 500
+        listMovies.current.scrollLeft += 800
     }
 
     return (

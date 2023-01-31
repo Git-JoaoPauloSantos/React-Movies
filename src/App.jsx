@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Outlet } from 'react-router-dom'
 import './App.css'
+import Footer from './components/Footer'
 import Navbar from './components/Navbar'
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <div className="App">
       <Navbar blackNavbar={blackNavbar} />
       <Outlet />
+      <Footer />
     </div>
   )
 }

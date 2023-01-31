@@ -18,7 +18,7 @@ export default {
             {
                 top: 'trending',
                 title: 'Recomendados para Você',
-                body: await fetchData(`trending/all/week?languege=pt-BR&`)
+                body: await fetchData(`movie/popular?languege=pt-BR&`)
             },
             {
                 top: 'toprated',

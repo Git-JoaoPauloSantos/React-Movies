@@ -3,12 +3,12 @@ import { useState, useEffect } from "react"
 import ListMovies from "../components/ListMovies"
 import FeaturedMovie from '../components/FeaturedMovie'
 import Api from "../Api"
+import LoadingPage from '../components/LoadingPage'
 
 
 const Home = () => {
   const [listAll, setListAll] = useState([])
   const [featureMovieData, setFeatureMuvieDdata] = useState(null)
-
 
   useEffect(() => {
     const loadAll = async () => {
@@ -33,6 +33,7 @@ const Home = () => {
           <ListMovies key={list.title} title={list.title} body={list.body} top={list.top} />
         ))}
       </section>
+      {listAll.length <= 0 & featureMovieData === null && <LoadingPage />}
     </div>
   )
 }

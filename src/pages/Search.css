@@ -5,6 +5,9 @@
 .grid-movies-container h2 {
      margin: 0 0 .8rem 2.5rem;
 }
+.grid-movies-container h2 span{
+    color: #e50914;
+}
 .grid-movies-container .grid-movies {
     display: flex;
     flex-wrap: wrap;

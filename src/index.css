@@ -22,7 +22,7 @@ body::-webkit-scrollbar-track {
     background: #00000000;
 }
 body::-webkit-scrollbar-thumb {
-    background-color: #c90000;
+    background-color: #e50914;
     border-radius: 20px;
     /* border: 3px solid orange; */
 }
@@ -30,5 +30,5 @@ body::-webkit-scrollbar-thumb {
 /* estilizando a barra de rolagem no navehador firfox */
 body {
     scrollbar-width: thin;
-    scrollbar-color: #c90000 #00000000;
+    scrollbar-color: #e50914 #00000000;
 }

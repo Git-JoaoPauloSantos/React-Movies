@@ -1,0 +1,45 @@
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 5px solid #2c2c2c;
+}
+footer .name{
+    margin: 2rem 0 1rem 0;
+    font-size: 1.2rem;
+}
+footer .name span{
+    color: #e50914;
+}
+footer .social-networks{
+    margin: 1rem 0;
+    height: 40px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+footer .social-networks a svg{
+    height: 100%;
+    font-size: 2rem;
+}
+footer .site{
+    margin: 1rem 0 2rem 0;
+}
+footer .site{
+    font-size: 1.1rem;
+}
+footer .site a{
+    text-decoration: underline;
+}
+#github:hover{
+    color: #4d4d4d;
+}
+#linkedin:hover{
+    color: #0e76a8;
+}
+#instagram:hover{
+    color: #E1306C;
+}
