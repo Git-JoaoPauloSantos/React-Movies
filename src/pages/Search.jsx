@@ -9,14 +9,16 @@ import { AiOutlineDislike } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
 import Functions from '../Functions';
 import LoadingPage from '../components/LoadingPage';
+import ImgNotFound from '../images/ImgNotFound.png'
 
 const searchURL = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
 const imageUrl = import.meta.env.VITE_IMG
+const searchGoogleURL = `https://www.google.com/search?q=assistir `
+
 
 const Search = () => {
   const [searchParams] = useSearchParams()
-
   const [movies, setMovies] = useState([])
   const query = searchParams.get("q")
 
@@ -32,11 +34,20 @@ const Search = () => {
       <div className="grid-movies">
         {movies.length > 0 && movies.map((movie) => (
           <div key={movie.id} className="movie">
-            <Link to={`/movie/${movie.id}`}><img src={imageUrl + movie.backdrop_path} alt={movie.name || movie.title} /></Link>
+            <Link
+              to={`/movie/${movie.id}`}>
+              <img
+                src={movie.backdrop_path ? imageUrl + movie.backdrop_path : ImgNotFound}
+                alt={movie.name || movie.title} />
+            </Link>
             <div className="content">
               <div className='btns'>
                 <div className="btn-group">
-                  <button className='btn-play'><FaPlay /></button>
+                  <a
+                    href={`${searchGoogleURL}${movie.name || movie.title}&sourceid=chrome&ie=UTF-8`}
+                    target="_blank">
+                    <button className='btn-play'><FaPlay /></button>
+                  </a>
                   <Link to={`/movie/${movie.id}`}><button><HiPlus /></button></Link>
                   <button><AiOutlineLike /></button>
                   <button><AiOutlineDislike /></button>

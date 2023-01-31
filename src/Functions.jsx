@@ -10,5 +10,9 @@ export default {
         let numFixed = Number(number.toFixed(1))
         let numInteger = numFixed * 10
         return numInteger
+    },
+    toFullYear: (date) => {
+        const dateFull = new Date(date)
+        return dateFull.getFullYear()
     }
 }

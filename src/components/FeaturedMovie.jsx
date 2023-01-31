@@ -19,7 +19,7 @@ const FeaturedMovie = ({ movie }) => {
                         <div className='featured-name'><h1>{Functions.limitDescription(movie.name || movie.title, 38)}</h1></div>
                         <div className="featured-description"><p>{Functions.limitDescription(movie.overview, 200)}</p></div>
                         <div className="buttons">
-                            <a href="#" className='btn-watch'> <FaPlay /> Assistir </a>
+                            <a href={`https://www.google.com/search?q=assistir ${movie.name || movie.title}&sourceid=chrome&ie=UTF-8`} target="_blank" className='btn-watch'> <FaPlay /> Assistir </a>
                             <a href="#" className='btn-more-infos'> <FiInfo /> Mais informações </a>
                         </div>
                     </div>

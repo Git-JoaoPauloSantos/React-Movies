@@ -8,7 +8,12 @@
     margin-left: 2.5rem;
 }
 .average p{
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     color: #85ff85cb;
-    font-weight: bold;
+    /* font-weight: bold */
+}
+.average p span{
+    color: #FFF;
+    font-size: 1.1rem;
+    margin-left: 1rem;
 }

@@ -10,6 +10,8 @@ import LoadingPage from '../components/LoadingPage'
 const moviesURL = import.meta.env.VITE_API_MOVIE
 const tvURL = import.meta.env.VITE_API_TV
 const apiKey = import.meta.env.VITE_API_KEY
+const searchGoogleURL = `https://www.google.com/search?q=assistir `
+
 
 const Movie = () => {
   const { id } = useParams()
@@ -30,10 +32,19 @@ const Movie = () => {
             <div className="featured-gradient-horizontal">
               <div className="featured-infos-movie">
                 <div className='featured-name'><h1>{Functions.limitDescription(movie.name || movie.title, 38)}</h1></div>
-                <div className="average"><p>{Functions.toInt(movie.vote_average)}% Relevante</p></div>
+                <div className="average">
+                  <p>{Functions.toInt(movie.vote_average)}% Relevante
+                    <span>{Functions.toFullYear(movie.first_air_date || movie.release_date)}</span>
+                  </p>
+                </div>
                 <div className="featured-description"><p>{Functions.limitDescription(movie.overview, 200)}</p></div>
                 <div className="buttons">
-                  <a href="#" className='btn-watch'> <FaPlay /> Assistir </a>
+                  <a
+                    href={`${searchGoogleURL}${movie.name || movie.title}&sourceid=chrome&ie=UTF-8`}
+                    target="_blank"
+                    className='btn-watch'>
+                    <FaPlay /> Assistir
+                  </a>
                 </div>
               </div>
             </div>
