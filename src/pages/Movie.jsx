@@ -1,19 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import './Movie.css'
-import { BsGraphUp, BsWallet2, BsHourglassSplit, BsFillFileEarmarkTextFill } from 'react-icons/bs'
-import { FaStar } from 'react-icons/fa'
+import '../components/FeaturedMovie.css'
 import { useParams } from 'react-router-dom'
 import { useFetch } from '../hooks/useFetch'
 import { FaPlay } from 'react-icons/fa';
-import { FiInfo } from 'react-icons/fi';
+import Functions from '../Functions'
 
 const moviesURL = import.meta.env.VITE_API_MOVIE
 const tvURL = import.meta.env.VITE_API_TV
 const apiKey = import.meta.env.VITE_API_KEY
-const imageUrl = import.meta.env.VITE_IMG
 
 const Movie = () => {
-
   const { id } = useParams()
   const { type } = useParams()
   const { data: movie } = useFetch(`${type == 'tv' ? tvURL : moviesURL}${id}?${apiKey}&language=pt-BR`)
@@ -36,10 +33,10 @@ const Movie = () => {
           }}>
           <div className="featured-gradient-vertical">
             <div className="featured-gradient-horizontal">
-              <div className="featured-infos">
-                <div className='featured-name'><h1>{movie.name || movie.title}</h1></div>
+              <div className="featured-infos-movie">
+                <div className='featured-name'><h1>{Functions.limitDescription(movie.name || movie.title, 38)}</h1></div>
                 <div className="average"><p>{toInt(movie.vote_average)}% Relevante</p></div>
-                <div className="featured-description"><p>{movie.overview}</p></div>
+                <div className="featured-description"><p>{Functions.limitDescription(movie.overview, 200)}</p></div>
                 <div className="buttons">
                   <a href="#" className='btn-watch'> <FaPlay /> Assistir </a>
                 </div>

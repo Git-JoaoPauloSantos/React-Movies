@@ -7,6 +7,7 @@ import { HiPlus } from 'react-icons/hi';
 import { AiOutlineLike } from 'react-icons/ai';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
+import Functions from '../Functions';
 
 const searchURL = import.meta.env.VITE_SEARCH
 const apiKey = import.meta.env.VITE_API_KEY
@@ -21,16 +22,8 @@ const Search = () => {
   const { data } = useFetch(`${searchURL}?${apiKey}&query=${query}&language=pt-BR`)
 
   useEffect(() => {
-
     { data && setMovies(data.results) }
-
   }, [data])
-
-  const toInt = (number) => {
-    let numFixed = number.toFixed(1)
-    let numInteger = numFixed * 10
-    return numInteger
-  }
 
   return (
     <div className='grid-movies-container'>
@@ -52,8 +45,8 @@ const Search = () => {
                 </div>
               </div>
               <div className="infos">
-                <p className='average'>{toInt(Number(movie.vote_average))}% Relevante</p>
-                <p className='name'>{movie.name || movie.title}</p>
+                <p className='average'>{Functions.toInt(movie.vote_average)}% Relevante</p>
+                <p className='name'>{Functions.limitDescription(movie.name || movie.title, 26)}</p>
               </div>
             </div>
           </div>

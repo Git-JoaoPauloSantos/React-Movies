@@ -11,12 +11,13 @@
     padding: 0 2.5rem;
     background: linear-gradient( to bottom, #111111ef, transparent);
     transition: all ease .8s;
+    /* background-color: green; */
 }
 #navbar.black{
     background: #141414;
 }
-#navbar .logo-container{
-    height: 30px;
+#navbar .left-container{
+    height: 35px;
 }
 #navbar img{
     height: 100%;
@@ -24,36 +25,53 @@
 #navbar form{
     display: flex;
     gap: .5rem;
-
+    align-items: center;
+    justify-content: center;
+    padding-left: .3rem;
 }
-#navbar input{
-    padding: .2rem .8rem;
-    border-radius: 4px;
+#navbar #search-input{
     border: none;
+    height: 35px;
+    outline: none;
+    width: 0;
+    background: transparent;
+    transition: all .3s;
+    color: #FFF;
 }
-#navbar form button{
-    background-color: #ff0000;
-    border: 2px solid #ff0000;
-    border-radius: 4px;
-    color: #000;
+#search-input::placeholder{
+    color: #d8d8d8;
+}
+#navbar #search-btn{
     padding: .3rem;
-    font-size: 1.3rem;
     display: flex;
     align-items: center;
+    font-size: 1.8rem;
     cursor: pointer;
     transition: .5s;
+    background: transparent;
+    border: none;
+    color: #FFF;
 }
-#navbar form button:hover{
-    background-color: #FFF;
-    border-color: #FFF;
-}
-.search-container{
+.right-container{
     display: flex;
+    align-items: center;
 }
-.icon-user{
-    height: 30px;
+#icon-user{
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
-.icon-user svg{
+#icon-user img{
     height: 100%;
-    font-size: 2.5rem;
+    border-radius: 3px;
+    margin-left: 3px;
+}
+#icon-notification{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    margin: 0 .5rem;
+}
+#icon-notification svg{
+    font-size: 1.8rem;
 }

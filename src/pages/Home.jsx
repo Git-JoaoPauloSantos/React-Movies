@@ -25,8 +25,6 @@ const Home = () => {
 
   }, [])
 
-  console.log(listAll)
-
   return (
     <div className="container">
       {featureMovieData && <FeaturedMovie movie={featureMovieData} />}

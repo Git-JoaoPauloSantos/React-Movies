@@ -6,6 +6,7 @@ import { HiPlus } from 'react-icons/hi';
 import { AiOutlineLike } from 'react-icons/ai';
 import { AiOutlineDislike } from 'react-icons/ai';
 import { RiArrowDownSLine } from 'react-icons/ri';
+import Functions from '../Functions'
 
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
@@ -22,13 +23,6 @@ const ListMovies = ({ title, body, top }) => {
     const handleRightClick = () => {
         listMovies.current.scrollLeft += 500
     }
-
-    const toInt = (number) => {
-        let numFixed = number.toFixed(1)
-        let numInteger = numFixed * 10
-        return numInteger
-    }
-
 
     return (
         <div className='list-movies-container'>
@@ -52,8 +46,8 @@ const ListMovies = ({ title, body, top }) => {
                                 </div>
                             </div>
                             <div className="infos">
-                                <p className='average'>{toInt(Number(movie.vote_average))}% Relevante</p>
-                                <p className='name'>{movie.name || movie.title}</p>
+                                <p className='average'>{Functions.toInt(movie.vote_average)}% Relevante</p>
+                                <p className='name'>{Functions.limitDescription(movie.name || movie.title, 26)}</p>
                             </div>
                         </div>
                     </div>

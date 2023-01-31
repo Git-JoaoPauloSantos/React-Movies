@@ -13,6 +13,22 @@ a{
     color: #FFF;
     transition: .5s;
 }
-/* a:hover{
-    color: rgb(255, 0, 0);
-} */
+
+/* Estilizando a barra de rolagem nos navegadores Chrome e Edge */
+body::-webkit-scrollbar {
+    width: 5px;
+}
+body::-webkit-scrollbar-track {
+    background: #00000000;
+}
+body::-webkit-scrollbar-thumb {
+    background-color: #c90000;
+    border-radius: 20px;
+    /* border: 3px solid orange; */
+}
+  
+/* estilizando a barra de rolagem no navehador firfox */
+body {
+    scrollbar-width: thin;
+    scrollbar-color: #c90000 #00000000;
+}

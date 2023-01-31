@@ -9,9 +9,9 @@
     display: flex;
     overflow: hidden;
     scroll-behavior: smooth;
-    /* background-color: #04dd0498; */
     height: 280px;
     align-items: center;
+    /* background-color: green; */
 }
 .list-movies .movie {
     width: 300px;
@@ -56,7 +56,7 @@
     height: 175px;
     cursor: pointer;
     background: rgba(0, 0, 0, 0.301);
-    transition: all ease .4s;
+    transition: all ease .5s;
     border: none;
     opacity: 0;
 }
@@ -68,15 +68,14 @@
     overflow: hidden;
     height: 0;
     transform: scale(0.9);
-    transition: all ease .3s;
+    transition: all .3s;
     background-color: #313131;
     border-radius: 4px;
 }
 .movie:hover .content{
-    height: auto;
-    margin-top: -25px;
+    height: 120px;
+    margin-top: -22px;
     transform: scale(1.08);
-    transition: all ease .3s;
 }
 .btns{
     display: flex;
@@ -89,13 +88,16 @@
 }
 .btn-group button, .btn-individual button{
     background-color: #4e4e4e;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     flex: none;
     border-radius: 50%;
     border: 1.5px solid #ccccccc4;
     color: #FFF;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .btn-group .btn-play{
     background: #FFF;
