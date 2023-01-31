@@ -17,10 +17,17 @@
     background: #141414;
 }
 #navbar .left-container{
-    height: 35px;
+    /* background-color: green; */
+    display: flex;
+    align-items: center;
+    gap: .8rem;
 }
-#navbar img{
-    height: 100%;
+.left-container .links{
+    gap: 1rem;
+    display: flex;
+}
+#navbar .left-container img{
+    height: 35px;
 }
 #navbar form{
     display: flex;

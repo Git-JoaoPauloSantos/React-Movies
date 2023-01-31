@@ -34,7 +34,7 @@ const ListMovies = ({ title, body, top }) => {
             <h2>{title}</h2>
             <div className="btn-left" onClick={handleLeftClick}> <button><MdNavigateBefore /></button> </div>
             <div className="btn-right" onClick={handleRightClick}> <button><MdNavigateNext /></button> </div>
-            <div className="list-movies" ref={listMovies}>
+            <div className="list-movies" ref={listMovies} id={top}>
                 {body.results.length > 0 && body.results.map((movie) => (
                     <div key={movie.id} className="movie">
                         <Link

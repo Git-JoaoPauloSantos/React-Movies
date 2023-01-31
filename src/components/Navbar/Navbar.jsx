@@ -27,7 +27,7 @@ const Navbar = ({ blackNavbar }) => {
         formInput.current.style.border = '1px solid #FFF'
     }
 
-    function myFunction() {
+    function invisibilitySearchInput() {
         input.current.style.width = '0px'
         formInput.current.style.border = 'none'
     }
@@ -39,10 +39,15 @@ const Navbar = ({ blackNavbar }) => {
         <nav id='navbar' className={blackNavbar ? 'black' : ''}>
             <div className="left-container">
                 <Link to={"/"}><img src={Logo} alt="ReactMovie" /></Link>
+                <div className="links">
+                    <Link to={"/"}>Início</Link>
+                    <a href="#originals">Séries</a>
+                    <a href="#toprated">Filmes</a>
+                </div>
             </div>
             <div className="right-container">
                 <form onSubmit={handleSubmit} ref={formInput} autoComplete="off">
-                    <input id='search-input' ref={input} onBlur={myFunction}
+                    <input id='search-input' ref={input} onBlur={invisibilitySearchInput}
                         type="text"
                         name="search"
                         placeholder="Pesquisar..."
