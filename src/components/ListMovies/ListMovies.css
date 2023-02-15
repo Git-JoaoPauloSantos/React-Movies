@@ -55,7 +55,7 @@
 .btn-right button{
     height: 175px;
     cursor: pointer;
-    background: rgba(0, 0, 0, 0.301);
+    background: rgba(0, 0, 0, 0.445);
     transition: all ease .5s;
     border: none;
     opacity: 0;
@@ -122,4 +122,32 @@
 .infos .name{
     font-size: 1.2rem;
     font-weight: bold;
+}
+
+@media (max-width: 620px){
+    .list-movies-container {
+        margin-bottom: 2rem;
+    }
+    .list-movies-container .list-movies{
+        height: 220px;
+    }
+    .list-movies-container h2{
+        margin: 0 0 -2rem 1rem;
+    }
+    .list-movies .movie{
+        width: 250px;
+    }
+    .list-movies .movie:hover img{
+        transform: scale(.9);
+    }
+    .movie:hover .content{
+        display: none;
+    }
+    .btn-left, .btn-right{
+        height: 216px;
+    }
+    .btn-left button, .btn-right button{
+        opacity: 1;
+        height: 127px;
+    }
 }

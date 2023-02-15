@@ -37,7 +37,7 @@ const Search = () => {
     <div className='grid-movies-container'>
       <h2>Resultados para: <span>{query}</span></h2>
       <div className="grid-movies">
-        {movies.length > 0 && movies.map((movie) => (
+        {movies && movies.map((movie) => (
           <div key={movie.id} className="movie">
             <Link
               to={`/movie/${movie.id}`}>
@@ -69,7 +69,7 @@ const Search = () => {
           </div>
         ))}
       </div>
-      {movies.length <= 0 && <LoadingPage />}
+      {!movies && <LoadingPage />}
     </div>
   )
 }

@@ -11,13 +11,11 @@
     padding: 0 2.5rem;
     background: linear-gradient( to bottom, #111111ef, transparent);
     transition: all ease .8s;
-    /* background-color: green; */
 }
 #navbar.black{
     background: #141414;
 }
 #navbar .left-container{
-    /* background-color: green; */
     display: flex;
     align-items: center;
     gap: .8rem;
@@ -26,17 +24,21 @@
     gap: 1rem;
     display: flex;
 }
-#navbar .left-container img{
+.left-container img{
     height: 35px;
 }
-#navbar form{
+.right-container{
+    display: flex;
+    align-items: center;
+}
+.right-container form{
     display: flex;
     gap: .5rem;
     align-items: center;
     justify-content: center;
     padding-left: .3rem;
 }
-#navbar #search-input{
+.right-container #search-input{
     border: none;
     height: 35px;
     outline: none;
@@ -48,7 +50,7 @@
 #search-input::placeholder{
     color: #d8d8d8;
 }
-#navbar #search-btn{
+.right-container #search-btn{
     padding: .3rem;
     display: flex;
     align-items: center;
@@ -59,26 +61,47 @@
     border: none;
     color: #FFF;
 }
-.right-container{
-    display: flex;
-    align-items: center;
-}
-#icon-user{
-    height: 40px;
-    display: flex;
-    align-items: center;
-}
-#icon-user img{
-    height: 100%;
-    border-radius: 3px;
-    margin-left: 3px;
-}
-#icon-notification{
+.right-container #icon-notification{
     height: 40px;
     display: flex;
     align-items: center;
     margin: 0 .5rem;
 }
-#icon-notification svg{
+.right-container #icon-notification svg{
     font-size: 1.8rem;
+}
+.right-container #icon-user{
+    height: 40px;
+    display: flex;
+    align-items: center;
+}
+.right-container #icon-user img{
+    height: 100%;
+    border-radius: 3px;
+    margin-left: 3px;
+}
+
+@media (max-width: 620px) {
+    #navbar{
+        padding: 0 1rem;
+    }
+    .left-container img{
+        height: 25px;
+    }
+    .left-container .links{
+        display: none;
+    }
+    .right-container #search-input{
+        height: 25px;
+        max-width: 100px;
+    }
+    .right-container #search-btn{
+        font-size: 1.2rem;
+    }
+    .right-container #icon-user{
+        height: 30px;
+    }
+    .right-container #icon-notification svg{
+        font-size: 1.2rem;
+    }
 }

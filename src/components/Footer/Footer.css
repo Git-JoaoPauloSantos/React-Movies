@@ -43,3 +43,10 @@ footer .site a{
 #instagram:hover{
     color: #E1306C;
 }
+
+@media (max-width: 620px){
+    footer .site{
+        font-size: 1rem;
+        margin: 1rem;
+    }
+}
