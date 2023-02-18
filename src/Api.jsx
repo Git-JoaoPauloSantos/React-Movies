@@ -12,7 +12,7 @@ export default {
         return [
             {
                 top: 'originals',
-                title: 'Originais Netflix',
+                title: 'Originais ReactMovies',
                 body: await fetchData(`discover/tv?with_network=213&languege=pt-BR&`)
             },
             {
